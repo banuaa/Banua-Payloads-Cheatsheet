@@ -4,10 +4,10 @@
 - Bash Comparison
 
 ### Bash Comparison
-- = and == are for string comparisons
-- -eq are for numeric comparisons
-**Example Vulnerable Code**
-```
+- **=** and **==** are for string comparisons
+- **-eq** are for numeric comparisons\
+**Vulnerable Code**
+``` bash
 DB_PASS="thisisdbpass"; => Just for example, it's should be REDACTED
 USER_PASS="i_dont_know_what_is_db_pass"
 
@@ -19,9 +19,8 @@ else
 fi
 ```
 The result of that will be "Failed" because DB_PASS and USER_PASS does not match!\
-
 **Exploit**
-```
+``` bash
 DB_PASS="thisisdbpass"; => Just for example, it's should be REDACTED
 USER_PASS="this*" => asterisk character (*) it acts as a wildcard and matches any part of the string.
 
