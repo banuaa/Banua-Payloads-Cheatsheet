@@ -5,10 +5,12 @@
 
 ### Bash Comparison
 - **= or == :** for string comparisons
-- **-q :** for numeric comparisons\
+- **-q :** for numeric comparisons.
+[//]: # (End of bullets)
+
 **Vulnerable Code**
 ``` bash
-DB_PASS="thisisdbpass"; => Just for example, it's should be REDACTED
+DB_PASS="thisisdbpass"; => Just for example, its should be REDACTED
 USER_PASS="i_dont_know_what_is_db_pass"
 
 if [[ $DB_PASS == $USER_PASS ]]; then
@@ -18,7 +20,8 @@ else
         exit 1
 fi
 ```
-The result of that will be "Failed" because DB_PASS and USER_PASS does not match!\
+The result of that will be "Failed" because DB_PASS and USER_PASS does not match!
+
 **Exploit**
 ``` bash
 DB_PASS="thisisdbpass"; => Just for example, its should be REDACTED
