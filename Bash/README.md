@@ -6,7 +6,7 @@
 ### Bash Comparison
 - **= or == :** for string comparisons
 - **-q :** for numeric comparisons.
-[]
+
 
 **Vulnerable Code**
 ``` bash
